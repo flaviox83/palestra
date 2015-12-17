@@ -1,0 +1,85 @@
+body{
+  background: url(images/bg-sky.png);
+  background-repeat: repeat !important;
+  background-attachment: fixed;
+}
+
+.navbar{
+  margin-bottom: 55px;
+}
+
+.wrapper{
+  display: table; margin: 0 auto;
+}
+
+.panel-group{
+  width: 300px;
+  float: left;
+}
+
+.panel-title a{
+  display: block;
+}
+
+i{
+  margin-right:5px;
+}
+
+.card{
+  float: left;
+  border: 1px solid #287cc2;
+  font-weight:lighter;
+  width: 480px;
+  margin: 0 75px;
+  box-shadow: 0px 0px 10px rgb(17, 17, 17);
+}
+
+.card img{
+  float: left;
+  padding: 30px 0;
+}
+
+.card h1{
+  font-size: 30px;
+  margin: 15px 0 0 0;
+}
+
+.card h2{
+  font-size: 22px;
+  margin: 10px 0 0 0;
+}
+
+.card p{
+  font-size: 15px;
+  margin: 5px 0 0 0;
+}
+
+.social a:hover{
+  text-decoration: none;
+}
+
+.details{
+  width: 95%;
+}
+
+.social{
+  margin: 15px 0 0 0;
+  font-size:20px;
+}
+
+.twitter-handle{
+  font-size: 15px;
+  margin-top: -5px;
+}
+
+@media (max-width: 1250px){
+  #accordion2{
+    float: none;
+    clear: both;
+    margin-left: 0px;
+  }
+
+  .card{
+    margin: 0 0 0 50px;
+  }
+}
