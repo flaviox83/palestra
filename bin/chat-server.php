@@ -67,7 +67,7 @@ $webServer = new Ratchet\Server\IoServer ( new Ratchet\Http\HttpServer ( new Rat
 
 // Let's add some periodic trigger, just to check that everything is running fine
 $logger->debug ( 'Adding periodic timer to main loop' );
-$loop->addPeriodicTimer ( 10, function () use($chat, $logger) {
+$loop->addPeriodicTimer ( 5, function () use($chat, $logger) {
 	$logger->info ( "[TIMER] sending keepalive to connected websocket clients" );
 
 	// as of now (20/12/2015) this cannot be sent, as it's **not** JSON-encoded
