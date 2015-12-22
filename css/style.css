@@ -5,6 +5,10 @@
       overflow-y: scroll;
 }
 
+.LogGrid .ui-grid-header{
+	height: 50px
+}
+
 .LogGrid {
     width: 800px;
     height: 600px;
