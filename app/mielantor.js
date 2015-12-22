@@ -104,7 +104,7 @@ myAppModule.factory("services", [ '$http', '$log', function($http) {
 } ]);
 
 myAppModule.factory('WebSocket', function($websocket) {
-	var ws = $websocket('ws://localhost:8888/');
+	var ws = $websocket('ws://10.6.1.119:8888/');
 	var collection = [];
 
 	var max_rows = 30;
