@@ -52,14 +52,14 @@ $server->on ( 'connection', function ($conn) use($chat, $logger) {
 
 // Let's run the main server socket
 $logger->debug ( 'Spinning main server socket' );
-$server->listen ( 1337, '127.0.0.1' );
+$server->listen ( 1337, '0.0.0.0' );
 
 // Let's run the main websocket
 $logger->debug ( 'Instantiating main WebSocket object' );
 $webSock = new React\Socket\Server ( $loop );
 
 $logger->debug ( 'Spinning main websocket' );
-$webSock->listen ( 8888, '127.0.0.1' );
+$webSock->listen ( 8888, '0.0.0.0' );
 
 // This is not clear... (to me, at least), unfortunately !!!!
 $logger->debug ( 'instantiating main webserver (?)' );
