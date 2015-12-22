@@ -1,0 +1,60 @@
+<!--  A regime, dare un'occhiata qui: http://nickholub.github.io/angular-dashboard-app -->
+<!--  ...che e' fatto con questo:  https://github.com/nickholub/angular-dashboard-app  -->
+
+<div class="row">
+	<div
+		class="col-md-12 navbar navbar-default navbar-fixed-top navbar-header">
+		<span class="navbar-brand">Mielantor</span>
+		<button class="btn btn-primary btn-xs"
+			ng-click="dashboardCtrl.toggleView()">visible:
+			{{dashboardCtrl.ngPopupOption.isShow}}</button>
+		<button class="btn btn-primary btn-xs"
+			ng-click="dashboardCtrl.toggleTitleBar()">Title Bar:
+			{{dashboardCtrl.ngPopupOption.hasTitleBar}}</button>
+		<button class="btn btn-primary btn-xs"
+			ng-click="dashboardCtrl.toggleDrag()">Draggable:
+			{{dashboardCtrl.ngPopupOption.draggable}}</button>
+		<button class="btn btn-primary btn-xs"
+			ng-click="dashboardCtrl.toggleResize()">Resizable:
+			{{dashboardCtrl.ngPopupOption.resizable}}</button>
+		<label class="label label-noticer"
+			ng-show="dashboardCtrl.ngPopupOption.isShow">Position:
+			{{dashboardCtrl.ngPopupOption.width}}x{{dashboardCtrl.ngPopupOption.height}}@{{dashboardCtrl.ngPopupOption.position.top}},{{dashboardCtrl.ngPopupOption.position.left}}
+		</label> <input type="number" ng-model="dashboardCtrl.rows"
+			ng-click="dashboardCtrl.SetRows()"> <label
+			class="label label-danger">Content available:
+			{{dashboardCtrl.contentavailable}}</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<!-- 			<div class="panel panel-default fixed-panel">
+				Default panel contents
+				<div class="panel-body">
+					<table class="table table-condensed table-bordered">
+						<tr ng-repeat="(i,oMsg) in dashboardCtrl.websocket.collection">
+							<td class="text-center">{{oMsg.timestamp}}</td>
+							<td>{{oMsg.host}}</td>
+							<td>{{oMsg.severity}}</td>
+							<td>{{oMsg.facility}}</td>
+							<td>{{oMsg.programname}}</td>
+							<td>{{oMsg.message}}</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+ -->
+		<div ui-grid="{ data: dashboardCtrl.websocket.collection}"
+			class="LogGrid"></div>
+	</div>
+</div>
+
+
+
+
+<ng-pop-up option="dashboardCtrl.ngPopupOption">Antani</ng-pop-up>
+
+<!--  questo serve, senno' non si vedono i POPUP di toaster.... -->
+<toaster-container
+	toaster-options="{'time-out': 3000, 'close-button':true}"></toaster-container>

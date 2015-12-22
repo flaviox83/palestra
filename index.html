@@ -1,8 +1,33 @@
-<html>
-<head><title>It works!</title></head>
+<html ng-app='Mielantor'>
+<head>
+    <meta charset="utf-8">
+    <title>MIELANTOR - The Real Time Monitoring web platform</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/toaster.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ngPopup.css">
+    <link rel="stylesheet" type="text/css" href="css/ui-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 <body>
-<h1>It works....</h1>
-<hr>
-<p>Questa e' la super-prima pagina da cui partiamo....</p>
+<div class="container">
+<div ng-view>
+</div>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
+<script src="js/angular-resource.min.js"></script>
+<script src="js/angular-sanitize.min.js"></script>
+<script src="js/angular-websocket.js"></script>
+<script src="js/ui-grid.min.js"></script>
+<script src="js/checklist-model.js"></script>
+<script src="js/ngPopup.js"></script>
+<script src="js/toaster.min.js"></script>
+<script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+<script src="app/mielantor.js"></script>
+<!-- <script src="js/spin.min.js"></script> -->
 </body>
 </html>
